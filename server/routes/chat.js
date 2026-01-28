@@ -56,7 +56,7 @@ router.post('/', async (req, res, next) => {
                     'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
                     'Content-Type': 'application/json',
                     'HTTP-Referer': 'http://localhost:5173',
-                    'X-Title': 'Premium AI Chatbot'
+                    'X-Title': 'CyberBot'
                 },
                 timeout: 30000 // 30 second timeout
             }

@@ -7,7 +7,7 @@ const Loader = ({ type = 'page' }) => {
                 <div className="flex flex-col items-center gap-6">
                     {/* App name/logo */}
                     <h1 className="text-2xl font-semibold text-text-primary tracking-tight">
-                        AI Chat
+                        CyberBot
                     </h1>
 
                     {/* Three-dot typing indicator */}

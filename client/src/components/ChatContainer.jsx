@@ -17,7 +17,7 @@ const ChatContainer = () => {
                         <div className="flex items-center justify-center h-full">
                             <div className="text-center space-y-4">
                                 <h2 className="text-3xl font-semibold text-text-primary">
-                                    Welcome to AI Chat
+                                    Welcome to CyberBot
                                 </h2>
                                 <p className="text-text-secondary">
                                     Start a conversation with the AI assistant
