@@ -4,7 +4,6 @@ services:
     name: cyberbot-backend
     env: node
     region: oregon
-    plan: free
     buildCommand: cd server && npm install
     startCommand: cd server && npm start
     envVars:
@@ -22,7 +21,6 @@ services:
   - type: web
     name: cyberbot-frontend
     env: static
-    plan: free
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: ./client/dist
     envVars:
