@@ -10,7 +10,7 @@ const InputBox = ({ onSend, disabled }) => {
         const textarea = textareaRef.current;
         if (textarea) {
             textarea.style.height = 'auto';
-            const newHeight = Math.min(textarea.scrollHeight, 120); // Max 5 lines (~24px per line)
+            const newHeight = Math.min(textarea.scrollHeight, 120);
             textarea.style.height = `${newHeight}px`;
         }
     }, [message]);
@@ -32,7 +32,7 @@ const InputBox = ({ onSend, disabled }) => {
 
     return (
         <form onSubmit={handleSubmit} className="w-full">
-            <div className="glass-medium rounded-input p-3 shadow-glass border border-glass-border transition-smooth focus-within:shadow-glow focus-within:scale-[1.01]">
+            <div className="glass-medium rounded-input shadow-glass px-4 py-3 transition-all duration-200 hover:shadow-glow">
                 <div className="flex items-end gap-3">
                     {/* Textarea */}
                     <textarea
@@ -43,19 +43,25 @@ const InputBox = ({ onSend, disabled }) => {
                         placeholder="Message AI..."
                         disabled={disabled}
                         rows={1}
-                        className="flex-1 bg-transparent border-none outline-none text-input text-text-primary placeholder-text-tertiary resize-none"
-                        style={{ maxHeight: '120px' }}
+                        className="flex-1 bg-transparent text-input text-text-primary placeholder:text-text-tertiary resize-none leading-6 py-0.5"
+                        style={{
+                            maxHeight: '120px',
+                            minHeight: '24px',
+                            border: 'none',
+                            outline: 'none',
+                            boxShadow: 'none'
+                        }}
                     />
 
                     {/* Send button */}
                     <button
                         type="submit"
                         disabled={disabled || !message.trim()}
-                        className="flex-shrink-0 w-10 h-10 rounded-button bg-accent-indigo/20 hover:bg-accent-indigo/30 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-smooth flex items-center justify-center group"
+                        className="flex-shrink-0 w-9 h-9 rounded-lg bg-accent-indigo/20 hover:bg-accent-indigo/30 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center group"
                     >
                         <Send
-                            size={18}
-                            className="text-accent-indigo group-hover:scale-110 transition-smooth"
+                            size={16}
+                            className="text-accent-indigo group-hover:scale-110 transition-transform duration-200"
                         />
                     </button>
                 </div>
