@@ -32,21 +32,21 @@ const InputBox = ({ onSend, disabled }) => {
 
     return (
         <form onSubmit={handleSubmit} className="w-full">
-            <div className="glass-medium rounded-input shadow-glass px-4 py-3 transition-all duration-200 hover:shadow-glow">
-                <div className="flex items-end gap-3">
+            <div className="relative glass-heavy rounded-2xl shadow-glass px-5 py-4 transition-all duration-300 hover:shadow-glow hover:bg-glass-medium">
+                <div className="flex items-center gap-4">
                     {/* Textarea */}
                     <textarea
                         ref={textareaRef}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        placeholder="Message AI..."
+                        placeholder="Message CyberBot..."
                         disabled={disabled}
                         rows={1}
-                        className="flex-1 bg-transparent text-input text-text-primary placeholder:text-text-tertiary resize-none leading-6 py-0.5"
+                        className="flex-1 bg-transparent text-[15px] text-text-primary placeholder:text-text-tertiary/60 resize-none leading-6 font-normal"
                         style={{
                             maxHeight: '120px',
-                            minHeight: '24px',
+                            minHeight: '28px',
                             border: 'none',
                             outline: 'none',
                             boxShadow: 'none'
@@ -57,11 +57,11 @@ const InputBox = ({ onSend, disabled }) => {
                     <button
                         type="submit"
                         disabled={disabled || !message.trim()}
-                        className="flex-shrink-0 w-9 h-9 rounded-lg bg-accent-indigo/20 hover:bg-accent-indigo/30 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center group"
+                        className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-accent-indigo to-accent-violet hover:from-accent-indigo/90 hover:to-accent-violet/90 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:from-accent-indigo/30 disabled:to-accent-violet/30 transition-all duration-200 flex items-center justify-center group shadow-lg shadow-accent-indigo/20"
                     >
                         <Send
-                            size={16}
-                            className="text-accent-indigo group-hover:scale-110 transition-transform duration-200"
+                            size={18}
+                            className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
                         />
                     </button>
                 </div>
