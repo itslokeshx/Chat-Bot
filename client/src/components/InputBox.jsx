@@ -43,13 +43,15 @@ const InputBox = ({ onSend, disabled }) => {
                         placeholder="Message CyberBot..."
                         disabled={disabled}
                         rows={1}
-                        className="flex-1 bg-transparent text-[15px] text-text-primary placeholder:text-text-secondary resize-none leading-5 font-normal py-1"
+                        className="flex-1 bg-transparent text-text-primary placeholder:text-text-secondary resize-none leading-5 font-normal py-1"
                         style={{
+                            fontSize: '16px', // Prevent iOS zoom
                             maxHeight: '120px',
                             minHeight: '20px',
                             border: 'none',
                             outline: 'none',
-                            boxShadow: 'none'
+                            boxShadow: 'none',
+                            touchAction: 'manipulation'
                         }}
                     />
 
@@ -57,11 +59,12 @@ const InputBox = ({ onSend, disabled }) => {
                     <button
                         type="submit"
                         disabled={disabled || !message.trim()}
-                        className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-violet hover:from-accent-indigo/90 hover:to-accent-violet/90 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:from-accent-indigo/30 disabled:to-accent-violet/30 transition-all duration-200 flex items-center justify-center group shadow-md shadow-accent-indigo/10"
+                        className="flex-shrink-0 w-10 h-10 md:w-8 md:h-8 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-violet hover:from-accent-indigo/90 hover:to-accent-violet/90 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:from-accent-indigo/30 disabled:to-accent-violet/30 transition-all duration-200 flex items-center justify-center group shadow-md shadow-accent-indigo/10"
+                        style={{ touchAction: 'manipulation' }}
                     >
                         <Send
-                            size={16}
-                            className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
+                            size={18}
+                            className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200 md:w-4 md:h-4"
                         />
                     </button>
                 </div>
