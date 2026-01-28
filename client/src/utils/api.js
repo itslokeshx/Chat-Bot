@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// Use environment variable for production, fallback to localhost for development
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Use environment variable for production, fallback to Render backend
+const API_BASE_URL = import.meta.env.VITE_API_URL ||
+    (import.meta.env.MODE === 'development'
+        ? 'http://localhost:5000/api'
+        : 'https://chat-bot-6ddh.onrender.com/api');
 
 // Create axios instance
 const api = axios.create({
