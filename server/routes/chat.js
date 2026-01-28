@@ -5,7 +5,6 @@ const router = express.Router();
 
 // OpenRouter API configuration
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 
 router.post('/', async (req, res, next) => {
     try {
@@ -20,8 +19,12 @@ router.post('/', async (req, res, next) => {
             });
         }
 
+        // Get API key at runtime (not at module load time)
+        const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+
         // Check API key
         if (!OPENROUTER_API_KEY) {
+            console.error('❌ API Key not found in process.env');
             return res.status(500).json({
                 success: false,
                 reply: null,
