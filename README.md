@@ -192,13 +192,3 @@ To change the AI model, edit `server/routes/chat.js` and update the `model` fiel
 
 MIT License - feel free to use this project for your portfolio!
 
-## 🙏 Acknowledgments
-
-- Design inspiration: Apple Vision Pro, Linear, Arc Browser
-- Icons: Lucide React
-- Fonts: Inter by Rasmus Andersson
-- AI: OpenRouter API
-
----
-
-**Built with ❤️ as a flagship portfolio piece**
