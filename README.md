@@ -1,4 +1,4 @@
-# 🤖 CyberBot
+#  CyberBot
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-blue?style=for-the-badge)](https://chat-bot-cyber.vercel.app/)
 
@@ -33,7 +33,7 @@ graph TD
 
 - **Frontend**: React, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
-- **AI Model**: GPT-3.5 Turbo (via OpenRouter)
+- **AI Model**: Gemini 2.0 Flash (via OpenRouter)
 
 ## 🚀 Quick Start
 

@@ -48,7 +48,7 @@ router.post('/', async (req, res, next) => {
         const response = await axios.post(
             OPENROUTER_API_URL,
             {
-                model: 'openai/gpt-3.5-turbo',
+                model: 'google/gemini-2.0-flash-001',
                 messages: messages
             },
             {
