@@ -33,7 +33,7 @@ graph TD
 
 - **Frontend**: React, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
-- **AI Model**: Perplexity Online (Real-time Web Search)
+- **AI Model**: GPT-3.5 Turbo (via OpenRouter)
 
 ## 🚀 Quick Start
 

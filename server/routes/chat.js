@@ -48,7 +48,7 @@ router.post('/', async (req, res, next) => {
         const response = await axios.post(
             OPENROUTER_API_URL,
             {
-                model: 'perplexity/llama-3.1-sonar-small-128k-online',
+                model: 'openai/gpt-3.5-turbo',
                 messages: messages
             },
             {
