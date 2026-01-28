@@ -33,7 +33,7 @@ graph TD
 
 - **Frontend**: React, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
-- **AI Model**: Gemini 2.0 Flash (via OpenRouter)
+- **AI Model**: Perplexity Online (Real-time Web Search)
 
 ## 🚀 Quick Start
 

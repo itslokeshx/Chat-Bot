@@ -48,7 +48,7 @@ router.post('/', async (req, res, next) => {
         const response = await axios.post(
             OPENROUTER_API_URL,
             {
-                model: 'google/gemini-2.0-flash-001',
+                model: 'perplexity/llama-3.1-sonar-small-128k-online',
                 messages: messages
             },
             {
