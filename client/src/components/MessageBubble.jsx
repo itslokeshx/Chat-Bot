@@ -15,8 +15,8 @@ const MessageBubble = ({ message, type, timestamp }) => {
             {/* Avatar */}
             <div
                 className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${isUser
-                        ? 'bg-gradient-to-br from-accent-indigo to-accent-violet shadow-md shadow-accent-indigo/20'
-                        : 'glass-medium border border-glass-border/50'
+                    ? 'bg-gradient-to-br from-accent-indigo to-accent-violet shadow-md shadow-accent-indigo/20'
+                    : 'glass-medium border border-glass-border/50'
                     }`}
             >
                 {isUser ? (
@@ -30,8 +30,8 @@ const MessageBubble = ({ message, type, timestamp }) => {
                 {/* Message bubble */}
                 <div
                     className={`px-4 py-3 rounded-2xl transition-all duration-200 ${isUser
-                            ? 'bg-gradient-to-br from-accent-indigo/20 to-accent-violet/20 border border-accent-indigo/30 rounded-br-md'
-                            : 'glass-medium border border-glass-border/50 rounded-bl-md'
+                        ? 'bg-accent-indigo/10 border border-accent-indigo/20 rounded-br-md'
+                        : 'glass-light border border-white/5 rounded-bl-md'
                         }`}
                 >
                     <p

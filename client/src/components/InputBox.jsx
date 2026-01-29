@@ -32,7 +32,7 @@ const InputBox = ({ onSend, disabled }) => {
 
     return (
         <form onSubmit={handleSubmit} className="w-full">
-            <div className="relative glass-medium rounded-2xl shadow-glass px-4 py-2.5 border border-glass-border transition-all duration-300 hover:bg-glass-heavy hover:border-accent-indigo/30">
+            <div className="relative glass-light rounded-2xl px-4 py-2.5 border border-white/5 transition-all duration-300 focus-within:border-accent-indigo/30">
                 <div className="flex items-center gap-3">
                     {/* Textarea */}
                     <textarea

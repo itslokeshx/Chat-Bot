@@ -10,7 +10,7 @@ const ChatContainer = () => {
         // Mobile: Full screen (dvh), no padding. Desktop: Boxed, centered, padded
         <div className="w-full h-[100dvh] md:h-screen flex flex-col p-0 md:max-w-[900px] md:mx-auto md:p-6 lg:p-8">
             {/* Main chat container */}
-            <div className="flex-1 flex flex-col overflow-hidden md:glass md:rounded-2xl md:shadow-glass relative">
+            <div className="flex-1 flex flex-col overflow-hidden md:glass md:rounded-2xl relative border-0 md:border md:border-white/5">
                 {/* Messages area */}
                 <div className="flex-1 overflow-y-auto px-4 py-4 md:px-6 md:py-8 space-y-4 pb-[80px] md:pb-4">
                     {messages.length === 0 ? (

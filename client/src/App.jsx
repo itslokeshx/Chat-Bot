@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import Background from './components/Background';
 import ChatContainer from './components/ChatContainer';
+import LandingPage from './components/LandingPage';
 import Loader from './components/Loader';
 import './index.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [chatStarted, setChatStarted] = useState(false);
 
   // Simulate initial loading
   useEffect(() => {
@@ -16,16 +18,30 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleStart = () => {
+    setChatStarted(true);
+  };
+
   if (isLoading) {
-    return <Loader type="page" />;
+    return (
+      <>
+        <Background />
+        <Loader type="page" />
+      </>
+    );
   }
 
   return (
     <>
       <Background />
-      <ChatContainer />
+      {!chatStarted ? (
+        <LandingPage onStart={handleStart} />
+      ) : (
+        <ChatContainer />
+      )}
     </>
   );
 }
 
 export default App;
+
