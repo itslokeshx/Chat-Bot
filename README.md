@@ -1,6 +1,6 @@
 #  CyberBot
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-blue?style=for-the-badge)](https://chat-bot-cyber.vercel.app/)
+<!-- [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-blue?style=for-the-badge)](https://chat-bot-cyber.vercel.app/) -->
 
 A modern, responsive AI chatbot application featuring a glassmorphic UI and real-time AI responses.
 
